@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+            <label>Aonde você nasceu?</label> 
+            <input class="pais" type="text">
+            <button onclick="descobrir()">Verificar</button>
+        <div class="resultado"></div>
+    
+<script>
+    function descobrir() {
+        let resultado = document.querySelector('.resultado')
+        let pais = document.querySelector('.pais')
+
+        
+        if (pais.value == 'Brasil') {
+            resultado.innerHTML = ` <p>Vivendo em ${pais.value}</p>
+            <p>Voce é Brasileiro</p>`
+        } 
+        else {
+            resultado.innerHTML = 
+            `<p>Vivendo em ${pais.value}</p>
+            <p>Voce é Estrangeiro.</p>
+            `
+        }
+
+      
+    }
+</script>
+</body>
+</html>

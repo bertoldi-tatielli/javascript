@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Perguntas</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 50px;
+      background-color: #f2f2f2;
+    }
+
+    .caixa {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+        margin: auto;
+    }
+
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 30%;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="caixa">
+
+    <h2>Informações</h2>
+
+    <label>Onde você nasceu?</label>
+    <input type="text" class="nascimento">
+
+    <label>Onde você mora?</label>
+    <input type="text" class="moradia">
+
+    <button>
+      Enviar
+    </button>
+
+    <div class="resultado"></div>
+
+  </div>
+
+  <script>
+
+    const botao = document.querySelector("button");
+
+    botao.addEventListener("click", function() {
+
+      const nasceu = document.querySelector(".nascimento").value;
+      const mora = document.querySelector(".moradia").value;
+
+      document.querySelector(".resultado").innerHTML =
+        "Você nasceu no " + nasceu +
+        " e mora na " + mora;
+    }); 
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Somando Números</title>
+
+  <style>
+    body {
+      font: normal 18px Arial;
+    }
+
+    input {
+      width: 100px;
+      font: normal 18px Arial;
+    }
+
+    #res {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Somando Valores</h1>
+
+  <input type="number" id="txtn1"> +
+  <input type="number" id="txtn2">
+
+  <button id="btnSomar">Somar</button>
+
+  <div id="res">Resultado</div>
+
+  <script>
+    const n1 = document.querySelector("#txtn1");
+    const n2 = document.querySelector("#txtn2");
+    const btn = document.querySelector("#btnSomar");
+    const res = document.querySelector("#res");
+
+    btn.addEventListener("click", somar);
+
+    function somar() {
+      let valor1 = Number(n1.value);
+      let valor2 = Number(n2.value);
+      let soma = valor1 + valor2;
+
+      res.innerText = `A soma é ${soma}`;
+    }
+  </script>
+
+  <!--
+   * querySelector → pega elementos do HTML
+   * addEventListener("click", somar) → quando clicar, executa a função
+   * value → pega valor do input
+   * Number() → converte txto em número
+   * innerText → mostra resultado na tela
+  -->
+
+</body>
+</html>

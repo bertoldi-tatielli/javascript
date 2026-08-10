@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Perguntas</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 50px;
+      background-color: #f2f2f2;
+    }
+
+    .caixa {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      margin: centera;
+    }
+
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 30%;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .btn-click {
+      background-color: rgba(3, 113, 135, 0.605);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="caixa">
+
+    <h2>Informações</h2>
+
+    <label>Onde você nasceu?</label>
+    <input type="text" class="nascimento">
+
+    <label>Onde você mora?</label>
+    <input type="text" class="moradia">
+
+    <button>
+      Enviar
+    </button>
+
+    <div class="resultado"></div>
+
+  </div>
+
+  <script>
+    function mostar() {
+      // Adicionar classe para o botão
+      botao.classList.add("btn-click");
+
+      // Obter os valores dos inputs
+      const nascimento = nasceu.value;
+      const moradia = mora.value;
+
+      // Exibir o resultado substituindo o conteúdo anterior
+      resultado.innerHTML =
+        "Você nasceu no " + nascimento +
+        " e mora na " + moradia;
+    }
+
+    // Referências dos elementos
+    const botao = document.querySelector("button");
+    const nasceu = document.querySelector(".nascimento");
+    const mora = document.querySelector(".moradia");
+    const resultado = document.querySelector(".resultado");
+
+    // Adicionar evento de clique para mostrar o resultado
+    botao.addEventListener("click", mostar);
+
+    // Remover a classe após o clique
+    botao.addEventListener("mouseout", function () {
+      botao.classList.remove("btn-click");
+    });
+
+    /* EXEMPLE COM DECALRACAO DA FUNCAO SEPARADO
+    botao.addEventListener("click", mostar);
+
+    function mostar() {
+      botao.style.background = "red"
+
+
+      const nascimento = nasceu.value;
+      const moradia = mora.value;
+
+      resultado.innerHTML =
+        "Você nasceu no " + nascimento +
+        " e mora na " + moradia;
+    }
+    */
+
+
+    /* EXEMPLE TUDO INLINE MAIS CURTA
+    document.querySelector("button").addEventListener("click", function () {
+      const nasceu = document.querySelector(".nascimento").value;
+      const mora = document.querySelector(".moradia").value;
+
+      document.querySelector(".resultado").innerHTML =
+        "Você nasceu no " + nasceu +
+        " e mora na " + mora;
+    });
+    */
+
+  </script>
+
+</body>
+
+</html>

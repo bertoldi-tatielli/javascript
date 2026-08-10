@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando HTML</title>
+</head>
+<body>
+    <h1>Testando HTML</h1>
+    <p>Quantos anos tem Maria?</p>
+    <input type="text" id="idadeMaria">
+    <button id="verificar">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        const idadeMaria = document.querySelector('#idadeMaria');
+        const verificar = document.querySelector ('#verificar');
+        const resultado = document.querySelector('#resultado');
+        verificar.addEventListener("click", idade);
+        function idade () {
+            const valor = idadeMaria.value;
+            let test
+            if (valor >= 18) {
+                resultado.textContent = 'Maior de idade';
+            } else  {
+                resultado.textContent = 'Menor de idade';
+            }
+
+            // resultado.innerHTML = "Voce é maior de idade" + 
+        };
+    </script>
+</body>
+</html>
