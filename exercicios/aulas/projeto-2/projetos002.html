@@ -8,17 +8,17 @@
 </head>
 <body>
     <header>
-        <h1>Verificador de Imagem</h1>
+        <h1>Verificador de Idade</h1>
     </header>
     <section>
         <div>
             <p>Ano de Nascimento:
-                <input type="number" name="txtano" id="txtano" min="0">
+                <input type="number" name="txtano" id="txtano" min="1920" max="2026" step="5" onchange="verificar()">
             </p>
             <p>Sexo:
-                <input type="radio" name="radsex" id="mas" checked>
+                <input type="radio" name="radsex" id="mas" checked onchange="verificar()">
                 <label for="mas">Masculino</label>
-                <input type="radio" name="radsex" id="fem">
+                <input type="radio" name="radsex" id="fem" onchange="verificar()">
                 <label for="fem">Feminino</label>
             </p>
             <p>

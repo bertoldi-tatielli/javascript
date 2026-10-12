@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tabuada</title>
+
+    <link
+        rel="stylesheet"
+        href="estilo.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+
+        <!-- =====================================
+             ÁREA PRINCIPAL DO JOGO
+             ===================================== -->
+
+        <section class="jogo">
+
+
+            <!-- =================================
+                 TÍTULO
+                 ================================= -->
+
+            <header class="cabecalho">
+
+                <div class="faixa-titulo">
+
+                    <h1>
+
+                        <span class="letra-1">T</span>
+
+                        <span class="letra-2">a</span>
+
+                        <span class="letra-3">b</span>
+
+                        <span class="letra-4">u</span>
+
+                        <span class="letra-5">a</span>
+
+                        <span class="letra-6">d</span>
+
+                        <span class="letra-7">a</span>
+
+                    </h1>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================
+                 PAINEL DA TABUADA
+                 ================================= -->
+
+            <section class="painel">
+
+
+                <!-- =============================
+                     TÍTULO DA TABUADA
+                     ============================= -->
+
+                <div class="titulo-tabuada">
+
+                    <span class="texto-tabuada">
+                        Vamos brincar de tabuada!
+                    </span>
+
+                    <span
+                        id="numeroTitulo"
+                        class="numero-titulo"
+                    ></span>
+
+                </div>
+
+
+                <!-- =============================
+                     ÁREA DE ENTRADA
+                     ============================= -->
+
+                <form class="entrada" id="formTabuada">
+
+                    <label for="txtn">
+                        Escolha um número:
+                    </label>
+
+
+                    <div class="controles">
+
+                        <input
+                            type="number"
+                            name="num"
+                            id="txtn"
+                        >
+
+
+                        <input
+                            type="submit"
+                            value="Gerar Tabuada"
+                        >
+
+                    </div>
+
+                </form>
+
+
+                <!-- =============================
+                     RESULTADO DA TABUADA
+                     ============================= -->
+
+                <div
+                    id="seltab"
+                    class="lista-tabuada"
+                >
+
+                    <div class="mensagem">
+
+                        Digite um número acima
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+        <!-- =====================================
+             RODAPÉ
+             ===================================== -->
+
+        <footer>
+
+            <p>
+                &copy; Tatielli Bertoldi
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
